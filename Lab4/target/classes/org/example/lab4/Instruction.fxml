@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<Pane minHeight="40.0" prefHeight="40.0" prefWidth="373.0" style="-fx-border-color: Black;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button fx:id="button" layoutX="7.0" layoutY="8.0" mnemonicParsing="false" onAction="#Del" prefHeight="25.0" prefWidth="22.0" text="x" />
+      <Button layoutX="36.0" layoutY="8.0" mnemonicParsing="false" onAction="#Up" prefHeight="25.0" prefWidth="35.0" text="&lt;&lt;" />
+      <Button layoutX="79.0" layoutY="8.0" mnemonicParsing="false" onAction="#Down" prefHeight="25.0" prefWidth="35.0" text="#" />
+      <GridPane fx:id="instructionGrid" layoutX="120.0" layoutY="5.0" minHeight="30.0" prefHeight="30.0" prefWidth="249.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+      </GridPane>
+   </children>
+</Pane>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<Pane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button layoutX="8.0" layoutY="10.0" mnemonicParsing="false" onAction="#AddInstr" prefHeight="17.0" prefWidth="139.0" text="Добавить инструкцию" />
+      <Button layoutX="158.0" layoutY="10.0" mnemonicParsing="false" onAction="#RemoveProg" prefHeight="25.0" prefWidth="219.0" text="Сбросить выполнение программы" />
+      <Label alignment="CENTER" layoutX="387.0" layoutY="10.0" prefHeight="23.0" prefWidth="207.0" style="-fx-border-color: Black;" text="Значения регистров:" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <GridPane fx:id="registr" alignment="CENTER" gridLinesVisible="true" layoutX="387.0" layoutY="40.0" prefHeight="43.0" prefWidth="207.0" style="-fx-border-color: Black;">
+        <columnConstraints>
+            <ColumnConstraints halignment="CENTER" />
+            <ColumnConstraints halignment="CENTER" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="NEVER" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints halignment="CENTER" hgrow="NEVER" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints halignment="CENTER" hgrow="NEVER" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="58.6666628519694" minHeight="10.0" prefHeight="46.666666666666664" valignment="CENTER" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="46.66666666666666" minHeight="8.000003814697266" prefHeight="46.66666666666666" valignment="CENTER" vgrow="SOMETIMES" />
+        </rowConstraints>
+      </GridPane>
+      <Label alignment="CENTER" layoutX="387.0" layoutY="88.0" prefHeight="25.0" prefWidth="207.0" style="-fx-border-color: Black;" text="Состояние памяти:">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="8.0" layoutY="40.0" prefHeight="23.0" prefWidth="369.0" style="-fx-border-color: Black;" text="Инструкции:">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <GridPane fx:id="RAM" alignment="CENTER" gridLinesVisible="true" layoutX="387.0" layoutY="118.0" prefHeight="161.0" prefWidth="207.0" style="-fx-border-color: Black;">
+        <columnConstraints>
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+      </GridPane>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="387.0" layoutY="285.0" prefHeight="43.0" prefWidth="207.0" style="-fx-border-color: Black;" text="Частота появления инструкций:" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <ScrollPane fx:id="scrollPane" hbarPolicy="NEVER" layoutX="8.0" layoutY="70.0" prefHeight="322.0" prefWidth="369.0" style="-fx-border-color: Black;" vbarPolicy="ALWAYS">
+         <content>
+            <GridPane fx:id="instructions" prefHeight="30.0" prefWidth="353.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="40.0" prefHeight="40.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+            </GridPane>
+         </content>
+      </ScrollPane>
+      <ScrollPane hbarPolicy="NEVER" layoutX="387.0" layoutY="335.0" prefHeight="57.0" prefWidth="207.0" style="-fx-border-color: Black;" vbarPolicy="ALWAYS">
+         <content>
+            <GridPane fx:id="frequency" prefHeight="26.0" prefWidth="204.0">
+              <columnConstraints>
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+              </rowConstraints>
+            </GridPane>
+         </content>
+      </ScrollPane>
+   </children>
+</Pane>
